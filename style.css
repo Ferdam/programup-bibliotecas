@@ -1,5 +1,6 @@
 body {
     display: grid;
+    gap: 16px;
     justify-items: center;
     align-items: center;
     font-family: Consolas;
@@ -18,11 +19,15 @@ body {
 
 .container {
     display: grid;
-    gap: 8px;
+    gap: 16px;
+}
+
+.programup-logo {
+    margin-top: 32px;
 }
 
 .container > a {
-    padding: 4px 8px;
+    padding: 8px 16px;
     border-radius: 4px;
     border: 2px solid #f92672;
     color: #f92672;
@@ -33,5 +38,6 @@ body {
 }
 
 .container > a:hover {
-    filter: brightness(105%);
+    background-color: #f92672;
+    color: #37373d;
 }
