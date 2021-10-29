@@ -1,0 +1,31 @@
+body {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #37373d;
+}
+
+.green-text {
+    color: #a6c835;
+}
+.orange-text {
+    color: #f49628;
+}
+.white-text {
+    color: #f9f8f3ff;
+}
+
+.container {
+    display: grid;
+    gap: 8px;
+}
+
+.container > a {
+    padding: 4px 8px;
+    border-radius: 4px;
+    border: 2px solid #f92672;
+    color: #f92672;
+    font-weight: 600;
+    background-color: #37373d;
+}
