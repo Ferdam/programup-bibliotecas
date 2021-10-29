@@ -1,0 +1,166 @@
+/* a propriedade display: flex; permite que eu possa usar a justify-content:center */
+/* justify-content só funciona com display = 'flex' ou 'grid' */
+body {
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+    background-color: #eee;
+}
+
+/* gap = espaçamento entre os elementos filhos */
+/* para entender melhor o 'gap', coloque um valor alto tipo 50px e veja a mudança na tela */
+/* experimente também colocar 0px */
+.container-grid {
+    display: grid;
+    gap: 12px;
+}
+
+/* elementos filhos do container que recebe essa classe ficam lado a lado */
+/* gap = espaçamento entre os elementos filhos */
+.container-side-by-side {
+    display: flex;
+    align-items: flex-start; /* joga o grupo de elementos pro topo (experimente remover) */
+    gap: 20px;
+}
+
+/* todos os elementos filhos de 'box' vão vir centralizados vertical e horizontalmente */
+.box {
+    display: grid;          /* ativa o elemento para tipo 'grid' */
+    align-items: center;    /* centraliza vertical */
+    justify-items: center;  /* centraliza horizontal */
+    color: white;
+    background-color: darkslategray;
+    padding: 4px;
+    width: 200px;
+    height: 100px;
+    text-align: center;
+}
+
+/* arredonda todos os cantos */
+.round-corners {
+    border-radius: 12px;
+}
+
+/* arredonda apenas as bordas da esquerda */
+.round-left-corners {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+/* ativa sombreamento atrás do elemento */
+.shadow-soft {
+    box-shadow: -1px -1px 6px rgba(0, 0, 0, 0.75);
+}
+/* borda grossa apenas na esquerda */
+.border-left {
+    border-left: 16px solid darkblue;
+}
+/* borda tracejada */
+.border-dashed {
+    border: 2px dashed orange;
+}
+/* borda pontilhada */
+.border-dotted {
+    border: 2px dotted orange;
+}
+/* engrossar a fonte do texto */
+/* valor padrão é 400 */
+/* não é possível usar valores diferentes dos que são mostrados no vscode */
+.thick-font {
+    font-weight: 600;
+}
+/* aplica o famoso underline no texto */
+.text-underline {
+    text-decoration: underline;
+}
+/* joga uma linha cortando o texto ao meio */
+.text-line-through {
+    text-decoration: line-through;
+}
+/* quando o mouse passar em cima do elemento, este irá aumentar de tamanho e mudar cor do fundo */
+/* :hover é um seletor para o evento que é disparado quando o mouse passa por cima do elemento */
+/* dessa forma podemos customizar o elemento quando o mouse passar por cima (hover) */
+.expand-block:hover {
+    transform: scale(105%, 105%);
+    background-color: rgb(175, 153, 79);
+}
+/* muda o cursor do mouse quando o mouse está sobre o elemento */
+.change-mouse-cursor {
+    cursor: not-allowed;
+}
+/* aplica um gradiente ao fundo do elemento */
+.gradient-background {
+    background: linear-gradient(#e66465, #9198e5);
+}
+/* aplica um gradiente com 90º de rotação ao fundo do elemento */
+.gradient-horizontal-background {
+    background: linear-gradient(90deg, #e66465, #9198e5);
+}
+/* gradiente com 3 paradas de cores */
+/* é possível colocar quantas quiser, basta colocar virgula e codigo de cor */
+.gradient-background-3stops {
+    background: linear-gradient(#e66465, #9198e5, #99e563);
+}
+/* gradiente circular (radial) */
+.gradient-background-radial {
+    background: radial-gradient(circle at center, red 0, blue, green 100%);
+}
+/* torna o elemento scrollable para quando existe um conteudo (filho) maior do que o tamanho do pai */
+.scrollable {
+    overflow-y: scroll;
+}
+/* Reduz a opacidade do elemento inteiro por 50%; 0% faz o elemento sumir */
+.opacity-50 {
+    opacity: 50%;
+}
+.bonus-hover-change:hover {
+    background-color: rgb(175, 153, 79);
+    transition: all linear 5s;
+}
+
+/* base de definição do circulo */
+/* observe que coloquei apenas o que há de comum entre os dois circulos */
+/* assim eu evito repetir tudo que esta no base, em cada um dos dois abaixo */
+.circle-base {
+    display: grid;          /* ativa o elemento para tipo 'grid' */
+    align-items: center;    /* centraliza vertical */
+    justify-items: center;  /* centraliza horizontal */
+    text-align: center;
+    height: 100px;
+    width: 100px;
+    border-radius: 400px;
+}
+/* circulo vazado */
+.circle-empty {
+    border: 3px solid darkslategray;
+    
+}
+/* circulo preenchido */
+.circle-filled {
+    color: white;
+    background-color: darkslategray;
+}
+/* aplica imagem ao fundo do elemento usando CSS */
+/* o background-size: cover faz com que a imagem caiba exatamente no elemento */
+/* experimente tirar o background-size: cover */
+.background-image-01 {
+    color: black;
+    font-weight: 900;
+    background-size: cover;
+    background-image: url('https://miro.medium.com/max/7680/1*ud_dnUTX6Fm3bzUWaaAycQ.png');
+}
+/* outra imagem de fundo e um exemplo de text-shadow (sombreamento de texto), no caso ajuda com visibilidade */
+.background-image-02 {
+    color: yellow;
+    text-shadow: 0px 0px 5px #008;
+    font-weight: 900;
+    background-size: cover;
+    background-image: url('https://image.freepik.com/free-vector/turquoise-seamless-zigzag-pattern_1035-17341.jpg');
+}
+/* eu poderia ter colocado uma classe direto no 'ul', mas também posso fazer assim, o que me poupa escrever mais classes */
+/* e me faz aproveitar mais as já existentes */
+/* esse seletor abaixo não modifica TODOS os ul da página, mas todos 'ul' que estão dentro dos elementos com a classe 'change-bullet' */
+.change-bullet > ul {
+    list-style-type: square;
+}
