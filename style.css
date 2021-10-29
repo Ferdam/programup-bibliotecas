@@ -31,3 +31,7 @@ body {
     text-align: center;
     text-decoration: none;
 }
+
+.container > a:hover {
+    filter: brightness(105%);
+}
